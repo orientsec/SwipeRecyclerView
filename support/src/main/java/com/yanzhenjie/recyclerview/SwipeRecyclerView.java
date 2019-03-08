@@ -576,7 +576,7 @@ public class SwipeRecyclerView extends RecyclerView {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent e) {
         boolean isIntercepted = super.onInterceptTouchEvent(e);
-        if (allowSwipeDelete || mSwipeMenuCreator == null) {
+        if (allowSwipeDelete/* || mSwipeMenuCreator == null*/) {
             return isIntercepted;
         } else {
             if (e.getPointerCount() > 1) return true;
